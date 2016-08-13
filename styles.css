@@ -15,22 +15,40 @@ body{
 	background-color: rgba(0,0,0,0.5);
 }
 .gallery-container{
+	position: relative;
 	padding: 1em;
 	width: 60%;
 	margin: 0 auto;
 	margin-top: 3em;
 	background-color: #fff;
 }
+.share_links{
+	list-style: none;
+	position: absolute;
+	right: 1em;
+	top: 0;
+}
+.share_links li{
+	display: inline-block;
+}
+.share_links img{
+	width: 50px;
+}
 .main-image{
-	height: 300px;
+	height: 400px;
 	background-image: url("bg.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 }
 .images{
 	overflow: auto;
 }
+.images-container{
+	text-align: center;
+}
 .images-container .img{
+	display: inline-block;
+	cursor: pointer;
 	width: 300px;
 	height: 200px;
 	background-repeat: no-repeat;
@@ -41,5 +59,8 @@ body{
 	background-image: url("bg.jpg");
 }
 .images-container ._2{
+	background-image: url("office.jpg");
+}
+.images-container ._2:hover .main-image{
 	background-image: url("office.jpg");
 }
