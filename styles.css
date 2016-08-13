@@ -1,9 +1,11 @@
 body{
-	background-image: url("bg.jpg");
+	background-image: url("_1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
 	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: background-image 0.3s;
 }
 .overlay{
 	position: absolute;
@@ -21,6 +23,7 @@ body{
 	margin: 0 auto;
 	margin-top: 3em;
 	background-color: #fff;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 .share_links{
 	list-style: none;
@@ -36,9 +39,10 @@ body{
 }
 .main-image{
 	height: 400px;
-	background-image: url("bg.jpg");
+	background-image: url("_1.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	transition: background-image 0.5s;
 }
 .images{
 	overflow: auto;
@@ -53,14 +57,27 @@ body{
 	height: 200px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	float: left;
+	margin: 0.5em;
+	position: relative;
+	overflow: hidden;
+}
+.images-container p{
+	position: absolute;
+	background-color: rgba(255,255,255,0.5);
+	padding: 1em;
+	bottom: -100%;
+	margin: 0;
+	transition: bottom 0.4s;
+}
+.images-container .img:hover p{
+	bottom: 0;
 }
 .images-container ._1{
-	background-image: url("bg.jpg");
+	background-image: url("_1.jpg");
 }
 .images-container ._2{
-	background-image: url("office.jpg");
+	background-image: url("_2.jpg");
 }
 .images-container ._2:hover .main-image{
-	background-image: url("office.jpg");
+	background-image: url("_2.jpg");
 }

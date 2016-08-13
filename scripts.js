@@ -1,8 +1,10 @@
 $(document).ready(function(){
-	$('._1').on("mouseover",function(){
-		$('.main-image').css({"background-image":"url('bg.jpg')"});
+	$('.images-container .img').on("mouseover",function(){
+		var className = this.classList[1];
+		$('.main-image').css({"background-image":"url('"+className+".jpg')"});
 	});
-	$('._2').on("mouseover",function(){
-		$('.main-image').css({"background-image":"url('office.jpg')"});
+	$('.images-container .img').on("click",function(){
+		var className = this.classList[1];
+		$("body").css({"background-image":"url('"+className+".jpg')"});
 	});
 });
